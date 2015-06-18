@@ -1,8 +1,8 @@
 /* global Backbone React */
 var App = Backbone.Router.extend({
     routes: {
-        '': 'profile',
-        'edit': 'edit'
+        '': 'home',
+        'home': 'home'
     },
     profile: function() {
       React.render(<Profile/>, document.querySelector('#container'));
