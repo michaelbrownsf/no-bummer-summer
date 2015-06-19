@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :activities
   get '/activities/', to: 'activities#index'
   post '/activities/new', to: 'activities#create'

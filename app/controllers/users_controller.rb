@@ -32,7 +32,6 @@ class UsersController < ApplicationController
         {user_id: @user.id, activity_id: 10, completed: false}
         ])
 
-
     respond_to do |format|
       if @user.save
         format.json { render json: @user, status: :created, location: @user }
