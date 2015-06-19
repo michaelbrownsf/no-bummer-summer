@@ -8,6 +8,7 @@ var SignupPage = React.createClass({
 				<input type="text" className="newPassword" placeholder="enter password" />
 				<input type="text" className="confirmPassword" placeholder="confirm password" />
 				<button type="submit">Submit</button>
+				<div></div>
 			</div>
 		);
 	}
