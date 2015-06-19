@@ -1,17 +1,34 @@
 /* global Backbone React */
+
+var containerEl = document.getElementById('container');
+
 var App = Backbone.Router.extend({
     routes: {
-        '': 'profile',
-        'edit': 'edit'
+        '': 'login',
+        'login': 'login',
+        'signup': 'signup',
+        'checklist': 'checklist'
     },
-    profile: function() {
-      React.render(<Profile/>, document.querySelector('#container'));
+    login: function() {
+        React.render(
+            <LoginPage />,
+            containerEl
+        );
+        
     },
-    edit: function() {
-      React.render(<Edit/>, document.querySelector('#container'));
+    signup: function() {
+        React.render(
+            <SignupPage />,
+            containerEl
+        );
+    },
+    checklist: function() {
+        React.render(
+            <ChecklistPage />,
+            containerEl
+        );
     }
 });
 
-var app = new App();
+var myApp = new App();
 Backbone.history.start();
-app.navigate('edit');

@@ -1,4 +1,3 @@
-
 var UserModel = Backbone.Model.extend({
 	defaults: {
 		_id: null,
