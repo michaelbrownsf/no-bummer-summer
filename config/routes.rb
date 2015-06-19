@@ -28,5 +28,9 @@ Rails.application.routes.draw do
   put '/user_activities/:id', to: 'user_activities#update'
   # DELETE  '/user_activities/:id', to: 'user_activities#destroy'
 
+  get 'login', to: 'sessions#new', as: 'login'
+  post 'login', to: 'sessions#create', as: 'create_session'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
   root 'application#index'
 end
