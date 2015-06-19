@@ -1,13 +1,21 @@
 /* global Backbone React */
 
 var containerEl = document.getElementById('container');
+var navEl = document.getElementById('nav');
+
+React.render(
+    <NavBar />,
+    navEl
+);
 
 var App = Backbone.Router.extend({
     routes: {
         '': 'login',
+        'home': 'login',
         'login': 'login',
         'signup': 'signup',
-        'checklist': 'checklist'
+        'checklist': 'checklist',
+        'about': 'about'
     },
     login: function() {
         React.render(
@@ -27,6 +35,13 @@ var App = Backbone.Router.extend({
             <ChecklistPage />,
             containerEl
         );
+    },
+    about: function() {
+        React.render(
+            <AboutPage />,
+            containerEl
+        );
+        
     }
 });
 
