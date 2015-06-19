@@ -2,9 +2,9 @@
 var LoginPage = React.createClass({
 	render: function() {
 		return (
-			<div>
-				<input type="text">
-				<input type="text">
+			<div className="loginDiv">
+				<input type="text" placeholder="username" />
+				<input type="text" placeholder="password" />
 			</div>
 		);
 	}

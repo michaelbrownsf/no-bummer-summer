@@ -1,12 +1,6 @@
 /* global Backbone React */
-var cat = new CategoryCollection([]);
 
 var containerEl = document.getElementById('container');
-
-React.render(
-    <SearchBar />,
-    navSearchEl
-);
 
 var App = Backbone.Router.extend({
     routes: {
@@ -20,6 +14,7 @@ var App = Backbone.Router.extend({
             <LoginPage />,
             containerEl
         );
+        
     },
     signup: function() {
         React.render(
@@ -37,4 +32,3 @@ var App = Backbone.Router.extend({
 
 var myApp = new App();
 Backbone.history.start();
-app.navigate('edit');
