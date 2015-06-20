@@ -6,15 +6,15 @@ var NavBar = React.createClass({
   					 <h2>No Bummer Summer</h2>
 				</header>
 
-				<!-- End Header -->
-
-				<!-- Navigation area contains the three elements below -->
-				<div class="line"><!-- --></div>
+				<div className="line">
+				</div>
 				<nav>
-					<a href="">home</a> | <a href="">profile</a> | <a href="">about</a></nav>
-				<div class="line"><!-- --></div>
-<!-- End Navigation -->
-	    		</div>
+					<a href='#checklist'>home</a> | <a href='#login'>profile</a> | <a href="#about">about</a>
+				</nav>
+				<div className="line">
+				</div>
+					
+	    	</div>
 		);
 	}
 });
