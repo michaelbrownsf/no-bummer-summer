@@ -2,7 +2,7 @@
 var AboutPage = React.createClass({
 	render: function() {
 		return (
-			<div class="content">
+			<div className="content">
 				<h1>What is No Bummer Summer?</h1>
 				<p>Let’s face it: As adults, summer is a bit of a letdown. You spend the majority of your youthful years counting down the days until that long awaited dismissal bell, granting you seemingly endless days of popsicles, bike rides, water parks and too much television. But college graduation comes and goes, and carefree fun is replaced with worrying about PTO and sick leave.
 				</p>
