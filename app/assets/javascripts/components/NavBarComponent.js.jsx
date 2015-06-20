@@ -9,7 +9,7 @@ var NavBar = React.createClass({
 				<div className="line">
 				</div>
 				<nav>
-					<a href='#checklist'>home</a> | <a href='#login'>profile</a> | <a href="#about">about</a>
+					<a href='#signup'>home</a> | <a href='#login'>profile</a> | <a href="#about">about</a>
 				</nav>
 				<div className="line">
 				</div>
