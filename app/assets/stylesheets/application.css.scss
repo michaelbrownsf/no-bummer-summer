@@ -58,57 +58,7 @@ table {
   border-spacing: 0;
 }
 
-$col: 6.725%;
-$gut: 1.754%;
 
-@mixin col ($col-num){
-  width: ($col * $col-num)+($gut * ($col-num - 1));
- margin-right: $gut;
-}
-
-.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col12 {
-  box-sizing: border-box;
-  float: left;
-  padding: 25px;
-  background-color: white;
-}
-
-.col1 {
-    @include col(1);
-}
-.col2 {
-    @include col(2);
-}
-.col3 {
-    @include col(3);
-}
-.col4 {
-    @include col(4);
-}
-.col5 {
-    @include col(5);
-}
-.col6 {
-    @include col(6);
-}
-.col7 {
-    @include col(7);
-}
-.col8 {
-    @include col(8);
-}
-.col9{
-    @include col(9);
-  .col10 {
-    @include col(10);
-  }
-  .col11 {
-    @include col(11);
-  }
-   .col12 {
-    @include col(12);
-}
-}
 
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
 @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
