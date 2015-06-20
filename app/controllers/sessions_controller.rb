@@ -5,19 +5,17 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      render json: "User logged in successfully."
-      # redirect_to root_url, notice: "You logged in successfully! Hooray!"
-    else
-      flash[:alert] = "Username or email did not match."
-      render :new
+      if user && user.authenticate(params[:password])
+        session[:user_id] = user.id
+        render json: user
+      else
+        render json: { error: "Invalid credentials" }, status: 421
     end
   end
 
   def destroy
     session[:user_id] = nil
-    render json: "User successfully logged out."
+    render json: user_id
     # redirect_to root_url, notice: "Successfully logged out."
   end
 
