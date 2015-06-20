@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+// BEGIN CSS BROWSER RESET -----------------------------------------------
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -173,26 +179,26 @@ input[type="checkbox"]:checked::before {
 }
 
 .button {
-	background-color:#8dc9ff;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	border:5px solid #000000;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family: "museo-slab",serif;
-	font-size:24px;
-	font-weight:bold;
-	padding:6px 25px;
-	text-decoration:none;
+  background-color:#8dc9ff;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border:5px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: "museo-slab",serif;
+  font-size:24px;
+  font-weight:bold;
+  padding:6px 25px;
+  text-decoration:none;
 }
 .button:hover {
-	background-color:#bae947;
+  background-color:#bae947;
 }
 .button:active {
-	position:relative;
-	top:1px;
+  position:relative;
+  top:1px;
 }
 
 /* This header should appear on every returned page */
