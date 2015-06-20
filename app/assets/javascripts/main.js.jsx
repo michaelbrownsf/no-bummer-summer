@@ -14,7 +14,8 @@ var App = Backbone.Router.extend({
         'home': 'login',
         'login': 'login',
         'signup': 'signup',
-        'checklist': 'checklist',
+        'checklist/:user': 'checklist',
+        'feed': 'feed',
         'about': 'about'
     },
     login: function() {
@@ -39,6 +40,13 @@ var App = Backbone.Router.extend({
     about: function() {
         React.render(
             <AboutPage />,
+            containerEl
+        );
+        
+    },
+    feed: function() {
+        React.render(
+            <NewsFeed />,
             containerEl
         );
         
