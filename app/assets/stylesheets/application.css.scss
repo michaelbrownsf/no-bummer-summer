@@ -178,6 +178,16 @@ input[type="checkbox"]:checked::before {
           transform: translateX(100%);
 }
 
+input[type="text"] {
+
+  width: 150px;
+  height: 50px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border:5px solid #000000;
+}
+
 .button {
   background-color:#8dc9ff;
   -moz-border-radius:10px;
