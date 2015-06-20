@@ -181,7 +181,7 @@ input[type="checkbox"]:checked::before {
 input[type="text"] {
 
   width: 150px;
-  height: 50px;
+  height: 30px;
   -moz-border-radius:1px;
   -webkit-border-radius:1px;
   border-radius:1px;
@@ -191,6 +191,16 @@ input[type="text"] {
   margin-left: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+  padding: 15px;
+  font-family: "museo-slab",serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  font-size: 2.25em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #5a5a5a;
 }
 
 button {
