@@ -185,7 +185,7 @@ input[type="text"], input[type="password"] {
   -moz-border-radius:1px;
   -webkit-border-radius:1px;
   border-radius:1px;
-  border:5px solid #000000;
+  border:5px solid #5a5a5a;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
@@ -208,7 +208,7 @@ button {
   -moz-border-radius:10px;
   -webkit-border-radius:10px;
   border-radius:10px;
-  border:5px solid #000000;
+  border:5px solid #5a5a5a;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
@@ -253,7 +253,7 @@ header{
   padding: 15px;
 }
 
-.contentcentered {
+.centeredcontainer {
   margin-right: auto;
   margin-left: auto;
   width: 80%;
