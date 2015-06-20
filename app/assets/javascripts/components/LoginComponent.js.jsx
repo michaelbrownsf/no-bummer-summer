@@ -14,9 +14,5 @@ var LoginPage = React.createClass({
 	userLogin: function(e) {
 		e.preventDefault;
 		console.log('submitted');
-		// var User = new UserModel({
-		// 	email: this.refs.username.value(),
-		// 	password: this.refs.password.value()
-		// });
 	}
 });

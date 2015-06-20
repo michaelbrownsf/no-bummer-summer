@@ -17,11 +17,12 @@ var SignupPage = React.createClass({
 	submitNewUser: function(e) {
 		e.preventDefault();
 
-		var newUser = new UserModel {
+		var newUser = new UserModel ({
 			firstName: this.refs.username.value(),
+			lastName: this.refs.username.value(),
 			email: this.refs.username.value(),
 			password: this.refs.password.value()
-		}
+		})
 	}
 
 

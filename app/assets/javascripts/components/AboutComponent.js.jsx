@@ -17,6 +17,6 @@ var AboutPage = React.createClass({
 			</div>
 
 		);
-	},
+	}
 
 });
