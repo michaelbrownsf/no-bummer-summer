@@ -1,3 +1,5 @@
+var activityList = [];
+
 var ChecklistPage = React.createClass({
 	render: function() {
 		return (
@@ -5,5 +7,6 @@ var ChecklistPage = React.createClass({
 		        This is the checklist page.
 	    	</div>
 		);
-	}
+	},
+
 });

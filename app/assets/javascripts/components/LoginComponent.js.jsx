@@ -17,6 +17,8 @@ var LoginPage = React.createClass({
 			password: this.refs.password.getDOMNode.value
 		}
 		
-		$.post('https://no-bummer-summer-2015.herokuapp.com/login', {email: loginValues.email, password: loginValues.password})
+		$.post('https://no-bummer-summer-2015.herokuapp.com/login', {email: loginValues.email, password: loginValues.password});
+
+		console.log(data.message);
 	}
 });
