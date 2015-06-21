@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   get '/posts/', to: 'posts#index'
   post '/posts/new', to: 'posts#create'
 
-  get 'login', to: 'sessions#new', as: 'login'
   post 'login', to: 'sessions#create', as: 'create_session'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
