@@ -2,14 +2,9 @@
 var LoginPage = React.createClass({
 	render: function() {
 		return (
-			<form ref="loginForm" onSubmit={this.userLogin}>
-<<<<<<< HEAD
-				<input type="text" ref="email" placeholder="email" />
-				<input type="text" ref="password" placeholder="password" />
-=======
+			<form className="centeredcontainer" ref="loginForm" onSubmit={this.userLogin}>
 				<input type="text" ref="email" placeholder="email" /><br />
-				<input type="password" ref="password" placeholder="password" /><br />
->>>>>>> master
+				<input type="text" ref="password" placeholder="password" /><br />
 				<button type="submit" ref="loginBtn">Log In</button>
 			</form>
 		);
@@ -17,14 +12,13 @@ var LoginPage = React.createClass({
 
 	userLogin: function(e) {
 		e.preventDefault;
-<<<<<<< HEAD
 
 		var User = {
 			email: this.refs.email.getDOMNode().value,
 			password: this.refs.password.getDOMNode().value
 		};
 
-		console.log(User.get('firstName'));
+		console.log(User.get());
 
 		if(User.email === '') {
 			console.log('please enter your username');
@@ -35,7 +29,7 @@ var LoginPage = React.createClass({
 		else {
 			myApp.navigate('#checklist/' + UserModel.firstName, {trigger:true});
 		}
-=======
+
 		var loginValues = {
 			email: this.refs.email.getDOMNode.value,
 			password: this.refs.password.getDOMNode.value
@@ -44,6 +38,5 @@ var LoginPage = React.createClass({
 		$.post('https://no-bummer-summer-2015.herokuapp.com/login', {email: loginValues.email, password: loginValues.password});
 
 		console.log(data.message);
->>>>>>> master
 	}
 });

@@ -2,9 +2,6 @@ var NavBar = React.createClass({
 	render: function() {
 		return (
 			<div>
-<<<<<<< HEAD
-		        
-=======
 		        <header>
   					 <h2>No Bummer Summer</h2>
 				</header>
@@ -16,8 +13,6 @@ var NavBar = React.createClass({
 				</nav>
 				<div className="line">
 				</div>
-					
->>>>>>> master
 	    	</div>
 		);
 	}

@@ -3,5 +3,7 @@ var UserActivityModel = Backbone.Model.extend({
 		activityId: null,
 		userId: null,
 		checked: false
-	}
+	},
+	urlRoot: 'https://no-bummer-summer-2015.herokuapp.com/user_activities',
+	idAttribute: '_id'
 });
