@@ -1,5 +1,5 @@
 /* global Backbone React */
-
+var users = new UserCollection();
 var containerEl = document.getElementById('container');
 var navEl = document.getElementById('nav');
 var footerEl = document.getElementById('footer');
