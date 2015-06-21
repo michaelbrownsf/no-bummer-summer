@@ -1,8 +1,9 @@
-## Installation Steps
+Design Deliverables
 
-1. Run `gem install bundler`
-1. Run `bundle install`
-1. Run `rake db:create` <-- Only the first time. _(Will need to have postgres setup and running)_
-1. Run `rake db:migrate`
-1. Run `rails s` to start the server
+ 1. [Wireframes](https://github.com/michaelbrownsf/tiy_assignments/raw/master/day_20/no-bummer-summer-wireframe.psd)
+ 2. [Style Tile 1](https://github.com/michaelbrownsf/tiy_assignments/raw/master/day_20/no-bummer-summer1.psd)
+ 3. [Style Tile 2](https://github.com/michaelbrownsf/tiy_assignments/raw/master/day_20/no-bummer-summer2.psd)
 
+[Trello Link](https://trello.com/b/d7x4L6bJ/no-bummer-summer)
+
+[Hackpad Link](https://hackpad.com/No-Bummer-SummerNBS-Day-2-fZBXZ1TEMEn#:h=NBS-Day-1)
