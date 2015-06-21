@@ -2,6 +2,12 @@
 
 var containerEl = document.getElementById('container');
 var navEl = document.getElementById('nav');
+var footerEl = document.getElementById('footer');
+
+React.render(
+    <Footer />,
+    footerEl
+);
 
 React.render(
     <NavBar />,
