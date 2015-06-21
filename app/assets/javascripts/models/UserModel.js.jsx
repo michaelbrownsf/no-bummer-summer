@@ -1,8 +1,8 @@
 var UserModel = Backbone.Model.extend({
 	defaults: {
 		_id: null,
-		firstName: null,
-		lastName: null,
+		first_name: null,
+		last_name: null,
 		email: null,
 		password: null,
 		age: 0,

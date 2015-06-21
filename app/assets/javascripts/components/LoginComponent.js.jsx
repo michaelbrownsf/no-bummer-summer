@@ -30,13 +30,13 @@ var LoginPage = React.createClass({
 		if(currentUser.isValid()) {
 
 			$.post(
-				'/login',
+				'http://no-bummer-summer-2015.herokuapp.com/login',
 				currentUser.attributes
 			)
 
 			.success(function(user) {
 				console.log(user);
-				myApp.navigate('checklist/'+currentUser.attributes[first_name], {trigger:true});
+
 			})
 			.error(function(error) {
 				self.refs.loginError.getDOMNode().innerHTML = error.responseJSON.error;

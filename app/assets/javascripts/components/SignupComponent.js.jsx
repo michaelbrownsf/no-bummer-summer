@@ -19,9 +19,9 @@ var SignupPage = React.createClass({
 		console.log('this is running');
 
 		var newUser = new UserModel ({
-					firstName: this.refs.newFirst.getDOMNode().value,
-					lastName: this.refs.newLast.getDOMNode().value,
 					email: this.refs.newEmail.getDOMNode().value,
+					first_name: this.refs.newFirst.getDOMNode().value,
+					last_name: this.refs.newLast.getDOMNode().value,
 					password: this.refs.newPassword.getDOMNode().value,
 					password_confirmation: this.refs.confirmPassword.getDOMNode().value
 				});

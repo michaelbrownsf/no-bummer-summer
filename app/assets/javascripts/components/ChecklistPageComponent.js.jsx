@@ -38,17 +38,5 @@ var ChecklistPage = React.createClass({
 			</div>
 		)
 	}
-	// checkboxClick: function(e) {
-	// 	$.get(
-	// 		'http://no-bummer-summer-2015.herokuapp.com/user_activities',
-	// 		function(userActivities) {
-	// 			if (user_activities['user_id'] === 1) {
-	// 				console.log('checkbox was clicked');
-	// 				user_activities[completed] = true;
-	// 			}
-	// 		},
-	// 		'json'
-	// 	)
-	// }
 
 });
