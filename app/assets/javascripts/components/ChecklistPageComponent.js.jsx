@@ -22,12 +22,15 @@ var ChecklistPage = React.createClass({
 		listItems = this.state.checklistArray.map(function(listModel) {
 			return (
 				<div key={listModel.cid}>
-					<h1>{listModel.name}</h1>
+					<input type="checkbox" name="checkbox" id="checkbox_id"/>
+					<label for="checkbox_id">{listModel.name}</label>
 				</div>
 			)
 		});
 		return (
-			<div>{listItems}</div>
+			<div>
+				{listItems}
+			</div>
 		)
 	}
 
