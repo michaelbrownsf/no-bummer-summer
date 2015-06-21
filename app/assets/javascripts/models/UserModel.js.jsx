@@ -12,7 +12,7 @@ var UserModel = Backbone.Model.extend({
 	idAttribute: '_id',
 
 	validate: function(attr, options) {
-		if(attr.item === '') {
+		if(attr.email === '') {
 			return 'Please fill out all fields';
 		}
 		return false;

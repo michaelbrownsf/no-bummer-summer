@@ -17,7 +17,7 @@ var LoginPage = React.createClass({
 
 	userLogin: function(e) {
 		e.preventDefault();
-
+		var self = this;
 		this.refs.loginError.getDOMNode().innerHTML = '';
 
 		console.log('function running');
@@ -28,32 +28,34 @@ var LoginPage = React.createClass({
 		});
 
 		if(currentUser.isValid()) {
-			console.log('user is valid');
-			loggedInUser = users.findWhere({
-				email: this.refs.email.getDOMNode().value,
-				password: this.refs.password.getDOMNode().value
-			});
-			myApp.navigate('checklist/' + users.firstName, {trigger: true});
 
-			if(loggedInUser) {
-				app.navigate('checklist/' + users.firstName, {trigger: true});
-			}
-			else {
-				this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
-			}
+			$.post(
+				'/login',
+				currentUser.attributes
+			)
+
+			.success(function(user) {
+				console.log(user);
+			})
+			.error(function(error) {
+				self.refs.loginError.getDOMNode().innerHTML = error.responseJSON.error;
+			})
+			// console.log('user is valid');
+			// loggedInUser = users.findWhere({
+			// 	email: this.refs.email.getDOMNode().value,
+			// 	password: this.refs.password.getDOMNode().value
+			// });
+			// myApp.navigate('checklist/' + users.firstName, {trigger: true});
+
+			// if(loggedInUser) {
+			// 	app.navigate('checklist/' + users.firstName, {trigger: true});
+			// }
+			// else {
+			// 	this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
+			// }
 		}
 		else {
-			loggedInUser = users.findWhere({
-				email: this.refs.email.getDOMNode().value,
-				password: this.refs.password.getDOMNode().value
-			});
-
-			if(loggedInUser) {
-				app.navigate('checklist/' + users.firstName, {trigger: true});
-			}
-			else {
-				this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
-			}
+			this.refs.loginError.getDOMNode().innerHTML = currentUser.validationError;
 		}	
 	}
 });
