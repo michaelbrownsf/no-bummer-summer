@@ -27,7 +27,7 @@ var SignupPage = React.createClass({
 				});
 
 		$.post(
-			'https://no-bummer-summer-2015.herokuapp.com/login',
+			'https://no-bummer-summer-2015.herokuapp.com/user/new',
 			{user:newUser.attributes},
 			function(data) {
 				console.log(data);
