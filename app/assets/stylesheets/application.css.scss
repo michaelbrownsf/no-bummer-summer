@@ -117,8 +117,8 @@ $gut: 1.754%;
 }
 
 
-@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 
 body{
   line-height: 1.75;
@@ -374,12 +374,14 @@ nav {
 
 label {
   
-  font-family: "museo-slab",serif;
+  font-family: "proxima-nova",sans-serif;
   font-style: normal;
-  font-size: 24px;
-  font-size: 1.5em;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.0em;
   color: black;
   padding: 25px;
+  margin-top: 20px;
 }
 
 footer{
@@ -401,6 +403,13 @@ footer{
     h2 {
 
       margin-top: 35px;
+
+    }
+
+    label {
+
+      font-size: 24px;
+      font-size: 1.5em;
 
     }
 
