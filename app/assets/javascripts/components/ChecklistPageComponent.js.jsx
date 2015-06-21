@@ -1,4 +1,5 @@
 var activityList = [];
+var userActivities = new UserActivityCollection();
 
 var ChecklistPage = React.createClass({
 	getInitialState: function() {
@@ -22,7 +23,7 @@ var ChecklistPage = React.createClass({
 		listItems = this.state.checklistArray.map(function(listModel) {
 			return (
 				<div key={listModel.cid}>
-					<input type="checkbox" name="checkbox" id="checkbox_id"/>
+					<input type="checkbox" name="checkbox" id="checkbox_id" onChange={this.checkboxClick}/>
 					<label for="checkbox_id">{listModel.name}</label>
 				</div>
 			)
@@ -36,20 +37,18 @@ var ChecklistPage = React.createClass({
 				{listItems}
 			</div>
 		)
-
-		function checkedBox(){
-        if (document.getElementById('checkbox_id').checked){
-            $.get(
-            	'https://no-bummer-summer-2015.herokuapp.com/user_activities',
-            	function(check) {
-            		
-            	}
-            )
-        }else{
-            $("#checkbox_id").removeProp("checked").checkboxradio("refresh");
-            document.cookie="checkbox_id=site_unchecked";
-        }
-    }
+	},
+	checkboxClick: function(e) {
+		$.get(
+			'https://no-bummer-summer-2015.herokuapp.com/user_activities',
+			function(userActivities) {
+				if (user_activities['user_id'] === 1) {
+					console.log('checkbox was clicked');
+					user_activities[completed] = true;
+				}
+			},
+			'json'
+		)
 	}
 
 });

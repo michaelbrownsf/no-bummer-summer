@@ -35,25 +35,25 @@ var LoginPage = React.createClass({
 			});
 			myApp.navigate('checklist/' + users.firstName, {trigger: true});
 
-			// if(loggedInUser) {
-			// 	app.navigate('checklist/' + users.firstName, {trigger: true});
-			// }
-			// else {
-			// 	this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
-			// }
+			if(loggedInUser) {
+				app.navigate('checklist/' + users.firstName, {trigger: true});
+			}
+			else {
+				this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
+			}
 		}
-		// else {
-		// 	loggedInUser = users.findWhere({
-		// 		email: this.refs.email.getDOMNode().value,
-		// 		password: this.refs.password.getDOMNode().value
-		// 	});
+		else {
+			loggedInUser = users.findWhere({
+				email: this.refs.email.getDOMNode().value,
+				password: this.refs.password.getDOMNode().value
+			});
 
-		// 	if(loggedInUser) {
-		// 		app.navigate('checklist/' + users.firstName, {trigger: true});
-		// 	}
-		// 	else {
-		// 		this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
-		// 	}
-		// }	
+			if(loggedInUser) {
+				app.navigate('checklist/' + users.firstName, {trigger: true});
+			}
+			else {
+				this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
+			}
+		}	
 	}
 });

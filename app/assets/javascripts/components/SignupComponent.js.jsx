@@ -18,13 +18,7 @@ var SignupPage = React.createClass({
 		e.preventDefault();
 		console.log('this is running');
 
-		var loggedInUser = false;
-
-		$.get(
-			'https://no-bummer-summer-2015.herokuapp.com/users/',
-			function onUsersLoaded(newlyFetchedCollection) {
-
-				var newUser = new UserModel ({
+		var newUser = new UserModel ({
 					firstName: this.refs.newFirst.getDOMNode().value,
 					lastName: this.refs.newLast.getDOMNode().value,
 					email: this.refs.newEmail.getDOMNode().value,
@@ -32,9 +26,12 @@ var SignupPage = React.createClass({
 					password_confirmation: this.refs.confirmPassword.getDOMNode().value
 				});
 
-				console.log(newUser);
-			},
-			'json'
+		$.post(
+			'/users/new',
+			{user:newUser.attributes},
+			function(data) {
+				console.log(data);
+			}
 		)
 	}
 });
