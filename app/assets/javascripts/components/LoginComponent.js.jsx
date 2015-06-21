@@ -36,23 +36,11 @@ var LoginPage = React.createClass({
 
 			.success(function(user) {
 				console.log(user);
+				myApp.navigate('checklist/'+currentUser.attributes[first_name], {trigger:true});
 			})
 			.error(function(error) {
 				self.refs.loginError.getDOMNode().innerHTML = error.responseJSON.error;
 			})
-			// console.log('user is valid');
-			// loggedInUser = users.findWhere({
-			// 	email: this.refs.email.getDOMNode().value,
-			// 	password: this.refs.password.getDOMNode().value
-			// });
-			// myApp.navigate('checklist/' + users.firstName, {trigger: true});
-
-			// if(loggedInUser) {
-			// 	app.navigate('checklist/' + users.firstName, {trigger: true});
-			// }
-			// else {
-			// 	this.refs.loginError.getDOMNode().innerHTML = 'User does not exist';
-			// }
 		}
 		else {
 			this.refs.loginError.getDOMNode().innerHTML = currentUser.validationError;

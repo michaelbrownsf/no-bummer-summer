@@ -9,7 +9,7 @@ var ChecklistPage = React.createClass({
 	},
 	componentDidMount: function() {
 		$.get(
-			'https://no-bummer-summer-2015.herokuapp.com/activities',
+			'http://no-bummer-summer-2015.herokuapp.com/activities',
 			function(activityList) {
 				if(this.isMounted()) {
 					this.setState({
@@ -19,7 +19,7 @@ var ChecklistPage = React.createClass({
 			}.bind(this)
 		);
 	},
-	render: function() {
+	render: function() 	{
 		listItems = this.state.checklistArray.map(function(listModel) {
 			return (
 				<div key={listModel.cid}>
@@ -37,18 +37,18 @@ var ChecklistPage = React.createClass({
 				{listItems}
 			</div>
 		)
-	},
-	checkboxClick: function(e) {
-		$.get(
-			'https://no-bummer-summer-2015.herokuapp.com/user_activities',
-			function(userActivities) {
-				if (user_activities['user_id'] === 1) {
-					console.log('checkbox was clicked');
-					user_activities[completed] = true;
-				}
-			},
-			'json'
-		)
 	}
+	// checkboxClick: function(e) {
+	// 	$.get(
+	// 		'http://no-bummer-summer-2015.herokuapp.com/user_activities',
+	// 		function(userActivities) {
+	// 			if (user_activities['user_id'] === 1) {
+	// 				console.log('checkbox was clicked');
+	// 				user_activities[completed] = true;
+	// 			}
+	// 		},
+	// 		'json'
+	// 	)
+	// }
 
 });
