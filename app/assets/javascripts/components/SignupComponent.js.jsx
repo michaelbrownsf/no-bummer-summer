@@ -1,5 +1,3 @@
-
-
 var SignupPage = React.createClass({
 	render: function() {
 		return (
@@ -11,7 +9,6 @@ var SignupPage = React.createClass({
 				<input type="password" className="newPassword" ref="newPassword" placeholder="enter password" /><br />
 				<input type="password" className="confirmPassword" ref="confirmPassword" placeholder="confirm password" /><br />
 				<button type="submit">Submit</button>
-				<div ref="registerError"></div>
 				<br /><a href="#login">Log in!</a>
 			</form>
 		);
@@ -19,36 +16,25 @@ var SignupPage = React.createClass({
 
 	submitNewUser: function(e) {
 		e.preventDefault();
+		console.log('this is running');
 
 		var loggedInUser = false;
 
-		users.fetch({ success: onUsersLoaded });
-
-		this.refs.registerError.getDOMNode.innerHTML = '';
-
-		function onUsersLoaded(newlyFetchedCollection) {
-			
-			this.refs.registerForm.on('submit', function(e) {
-				e.preventDefault();
+		$.get(
+			'https://no-bummer-summer-2015.herokuapp.com/users/',
+			function onUsersLoaded(newlyFetchedCollection) {
 
 				var newUser = new UserModel ({
-					firstName: this.refs.newFirst.getDOMNode.value,
-					lastName: this.refs.newLast.getDOMNode.value,
-					email: this.refs.newEmail.getDOMNode.value,
-					password: this.refs.newPassword.getDOMNode.value,
-					password_confirmation: this.refs.newPassword.getDOMNode.value
+					firstName: this.refs.newFirst.getDOMNode().value,
+					lastName: this.refs.newLast.getDOMNode().value,
+					email: this.refs.newEmail.getDOMNode().value,
+					password: this.refs.newPassword.getDOMNode().value,
+					password_confirmation: this.refs.confirmPassword.getDOMNode().value
 				});
 
-				if(!newUser.isValid()) {
-					this.refs.registerError.getDOMNode.innerHTML = newUser.validationError;
-				}
-				else {
-					console.log('You should save the user');
-					newUser.save();
-					app.navigate('checklist/' + newUser.firstName, {trigger: true});
-				}
-
-			});
-		}
+				console.log(newUser);
+			},
+			'json'
+		)
 	}
 });
