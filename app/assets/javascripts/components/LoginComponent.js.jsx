@@ -30,12 +30,12 @@ var LoginPage = React.createClass({
 		if(currentUser.isValid()) {
 
 			$.post(
-				'http://no-bummer-summer-2015.herokuapp.com/login',
+				'https://no-bummer-summer-2015.herokuapp.com/login',
 				currentUser.attributes
 			)
 
 			.success(function(user) {
-				console.log(user);
+				myApp.navigate('/about', {trigger:true});
 
 			})
 			.error(function(error) {

@@ -1,8 +1,8 @@
 var UserActivityModel = Backbone.Model.extend({
 	defaults: {
-		activityId: null,
-		userId: null,
-		checked: false
+		activity_id: null,
+		user_id: null,
+		completed: false
 	},
 	urlRoot: 'https://no-bummer-summer-2015.herokuapp.com/user_activities',
 	idAttribute: '_id'
